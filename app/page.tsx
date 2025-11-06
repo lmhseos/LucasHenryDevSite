@@ -25,24 +25,24 @@ const starCount = (density: number) => Math.floor(400 * density);
 // Demo projects
 const projects = [
   {
-    title: "ValveVision QA",
-    desc: "Computer vision app for validating automotive valve trays with YOLO + SAHI, real-time alerts, and Andon light integration.",
+    title: "Discord Bot",
+    desc: "This Discord bot, built using C#, Replicate, and AWS, can generate AI images, roll dice, and take polls. It provides a fun and interactive experience for users.",
     image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?q=80&w=1200&auto=format&fit=crop",
-    tags: ["Python", "YOLO", "Tkinter", "Hardware"],
+    tags: ["Python", "Replicate", "AWS"],
     links: { demo: "#", code: "#" },
   },
   {
-    title: "Zap2Sheets",
-    desc: "Automation that parses invoice emails and logs structured data into Google Sheets via AI Studio.",
+    title: "Index Llama Agent",
+    desc: "Index Llama Agent is a local large language model agent developed using Python, Llama, and Slack API. It can execute code, retrieve data, and solve problems autonomously",
     image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=1200&auto=format&fit=crop",
-    tags: ["Zapier", "Google AI Studio", "Sheets"],
+    tags: ["Ollama", "Slack API", "Python"],
     links: { demo: "#", code: "#" },
   },
   {
-    title: "Distros Hub",
-    desc: "B2B marketplace MVP for industrial distribution with modern full‑stack stack and auth.",
+    title: "Personal Site",
+    desc: "My personal site, created with ReactJS, C#, and OpenAI, showcases my projects and work experience. It highlights my web development and AI integration skills.",
     image: "https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=1200&auto=format&fit=crop",
-    tags: ["Next.js", "Postgres", "Prisma"],
+    tags: ["Next.js", "Tailwind", "Vector Database"],
     links: { demo: "#", code: "#" },
   },
 ];
@@ -83,7 +83,6 @@ export default function SpacePortfolio() {
         <div className="relative z-10">
           <header className="sticky top-0 z-50 backdrop-blur supports-[backdrop-filter]:bg-black/40 bg-black/30 border-b border-white/10">
             <Container className="flex h-14 items-center justify-between">
-              <a href="#about" className="font-semibold tracking-wide text-white/90 hover:text-white">/dev.space</a>
               <nav className="hidden gap-6 md:flex">
                 <a href="#about" className="text-sm text-indigo-200 hover:text-white">About</a>
                 <a href="#projects" className="text-sm text-indigo-200 hover:text-white">Projects</a>
@@ -96,7 +95,6 @@ export default function SpacePortfolio() {
                   {showStars ? "Stars: On" : "Stars: Off"}
                 </Button>
                 <Button asChild size="sm" className="hidden sm:inline-flex">
-                  <a href="#contact">Hire me <ArrowUpRight className="ml-1 h-4 w-4" /></a>
                 </Button>
               </div>
             </Container>

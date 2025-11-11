@@ -27,21 +27,21 @@ const projects = [
   {
     title: "Discord Bot",
     desc: "This Discord bot, built using C#, Replicate, and AWS, can generate AI images, roll dice, and take polls. It provides a fun and interactive experience for users.",
-    image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?q=80&w=1200&auto=format&fit=crop",
+    image: "/discord.png", 
     tags: ["Python", "Replicate", "AWS"],
     links: { demo: "#", code: "#" },
   },
   {
     title: "Index Llama Agent",
     desc: "Index Llama Agent is a local large language model agent developed using Python, Llama, and Slack API. It can execute code, retrieve data, and solve problems autonomously",
-    image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=1200&auto=format&fit=crop",
+    image: "llama.jpg",
     tags: ["Ollama", "Slack API", "Python"],
     links: { demo: "#", code: "#" },
   },
   {
     title: "Personal Site",
     desc: "My personal site, created with ReactJS, C#, and OpenAI, showcases my projects and work experience. It highlights my web development and AI integration skills.",
-    image: "https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=1200&auto=format&fit=crop",
+    image: "space.png",
     tags: ["Next.js", "Tailwind", "Vector Database"],
     links: { demo: "#", code: "#" },
   },
@@ -163,8 +163,8 @@ export default function SpacePortfolio() {
                   <motion.div key={p.title} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: i * 0.05 }} viewport={{ once: true }}>
                     <Card className="group h-full overflow-hidden border-white/10 bg-white/5 backdrop-blur">
                       <CardHeader className="p-0">
-                        <div className="relative aspect-video w-full overflow-hidden">
-                          <img src={p.image} alt="Project preview" className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                        <div className="relative aspect-video w-full overflow-hidden object-fit: fill;">
+                          <img src={p.image} alt="Project preview" className="h-full w-full object-contain transition-transform duration-500 group-hover:scale-105" />
                           <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
                         </div>
                       </CardHeader>
